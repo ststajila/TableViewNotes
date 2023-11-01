@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var textFieldOutlet: UITextField!
     var numbers = [3, 5, 7, 9, 12, 15]
     var books = [Book]()
+    var selectedName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,5 +59,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedName = books[indexPath.row].author
+        print(selectedName)
+            
+        }
+        
+    }
 
